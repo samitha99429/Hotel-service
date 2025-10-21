@@ -1,4 +1,10 @@
+import { IsString, IsOptional, IsBoolean } from 'class-validator';
+
 export class SearchHotelDto {
+  @IsString()
   destination: string;
-  lateCheckIn?: boolean; 
+
+  @IsOptional()
+  @IsBoolean()
+  lateCheckIn?: boolean;
 }
